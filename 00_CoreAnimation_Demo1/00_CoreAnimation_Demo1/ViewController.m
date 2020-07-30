@@ -6,7 +6,16 @@
 //  Copyright © 2020 yidai. All rights reserved.
 //
 /*
- 动画sanbuzh
+ 动画三步骤
+ 1. 初始化动画对象
+ 2. 修改动画属性值
+ 3. 将动画添加到layer
+ 
+ 看到的都是假象，UIView并没有发生变化
+ 隐式动画: 默认duration=0.25
+ presentationLayer负责显示
+ 
+ 
  */
 
 #import "ViewController.h"
@@ -35,6 +44,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     _layer.frame = CGRectMake(100, 400, 100, 100);
+    _layer.backgroundColor = [UIColor orangeColor].CGColor;
 //    CGPoint p = [[touches anyObject] locationInView:self.view];
 //    if (_redView.layer.presentationLayer == [_redView.layer hitTest:p]) {
 //        NSLog(@"1");
