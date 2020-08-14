@@ -1,0 +1,17 @@
+//
+//  PrefixHeader.pch
+//  01_00_菜单栏划入
+//
+//  Created by yidai on 2020/8/14.
+//  Copyright © 2020 yidai. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <UIView+YYAdd.h>
+
+#endif /* PrefixHeader_pch */
