@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "SlideMenuView.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) SlideMenuView *menuView;
 
 @end
 
@@ -17,6 +20,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (SlideMenuView *)menuView {
+    if (!_menuView) {
+        _menuView = [[SlideMenuView alloc] initWithBtnTitle:@[@"1", @"2", @"3", @"4", @"5", @"6"]];
+    }
+    return _menuView;
+}
+
+- (IBAction)showBtnClicked:(id)sender {
+    [self.menuView switchAcition];
 }
 
 

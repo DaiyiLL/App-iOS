@@ -51,10 +51,10 @@
         self.backgroundColor = [UIColor clearColor];
         
 //        [keyWindow addSubview:self];
-        _helperSideView = [[UIView alloc] initWithFrame:CGRectMake(-40, 0, 40, 40)];;
-//        helperSideView.backgroundColor = [UIColor redColor];
+        _helperSideView = [[UIView alloc] initWithFrame:CGRectMake(-40, AppDelegate.safeInset.top, 40, 40)];;
+        _helperSideView.backgroundColor = [UIColor redColor];
         _helperCenterView = [[UIView alloc] initWithFrame:CGRectMake(-40, CGRectGetHeight(_keyWindow.bounds)/2-20, 40, 40)];;
-//        helperCenterView.backgroundColor = [UIColor orangeColor];
+        _helperCenterView.backgroundColor = [UIColor orangeColor];
         
         [_keyWindow addSubview:_helperSideView];
         [_keyWindow addSubview:_helperCenterView];
@@ -111,66 +111,74 @@
 - (void)addBtnTitles:(NSArray *)titles{
     CGFloat space = (CGRectGetHeight(_keyWindow.bounds) - titles.count*menuBtnHeight - (titles.count-1)*buttonSpace)/2;
     for (int i = 0; i < titles.count; i++) {
-        UIButton *btn = [UIButton buttonWithType:(UIButtonTypeCustom)];
-        
-        slideMenuBtn *btn = [[slideMenuBtn alloc] initWithTitle:titles[i]];
-        btn.center = CGPointMake(CGRectGetWidth(keyWindow.bounds)/4, space + menuBtnHeight*i + buttonSpace*i);
-        btn.bounds = CGRectMake(0, 0, CGRectGetWidth(keyWindow.bounds)/2 - 20*2, menuBtnHeight);
+        UIButton *btn = [DYFactory initButtonWithFrame:CGRectZero title:titles[i] titleColor:UIColor.whiteColor font:[UIFont regularFont:15]];
+        btn.center = CGPointMake(_keyWindow.width/4, space + menuBtnHeight*i + buttonSpace*i);
+        btn.bounds = CGRectMake(0, 0, _keyWindow.width/2 - 20*2, menuBtnHeight);
         [self addSubview:btn];
     }
 }
 //添加定时器
 - (void)getDiff{
-    if (!displayLink) {
-        displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(displayLinkAction:)];
-        [displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+    if (!_displayLink) {
+        _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(displayLinkAction:)];
+        [_displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
     }
 }
 #pragma mark - Actions
 //移除定时器
 - (void)removeDisplayLink{
-    [displayLink invalidate];
-    displayLink = nil;
+    [_displayLink invalidate];
+    _displayLink = nil;
 }
 - (void)displayLinkAction:(CADisplayLink *)link{
 //    NSLog(@"%@",NSStringFromCGRect(helperSideView.frame));
-    CALayer *layer1 = helperSideView.layer.presentationLayer;
-    CALayer *layer2 = helperCenterView.layer.presentationLayer;
+    CALayer *layer1 = _helperSideView.layer.presentationLayer;
+    CALayer *layer2 = _helperCenterView.layer.presentationLayer;
     
     CGRect r1 = [[layer1 valueForKeyPath:@"frame"] CGRectValue];
     CGRect r2 = [[layer2 valueForKeyPath:@"frame"] CGRectValue];
 
-    diff = r1.origin.x - r2.origin.x;
-    NSLog(@"%f",diff);
+    _diff = r1.origin.x - r2.origin.x;
+    NSLog(@"%f", _diff);
     
 
     [self setNeedsDisplay];
 }
 //点击按钮
 -(void)switchAcition{
-    if (!swiched) {
+    if (!_swiched) {
     
         //1.添加模糊背景
-        [keyWindow insertSubview:blurView belowSubview:self];
+        [_keyWindow insertSubview:_blurView belowSubview:self];
         //2.划入菜单栏
         [UIView animateWithDuration:.3 animations:^{
             self.frame = self.bounds;
-            blurView.alpha = 1;
+            self.blurView.alpha = 1;
         }];
-        //3.添加弹簧动画
-        [UIView animateWithDuration:.7 delay:0 usingSpringWithDamping:.5 initialSpringVelocity:.9 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
-            helperSideView.center = CGPointMake(keyWindow.center.x, CGRectGetHeight(helperSideView.bounds)/2);
+        // 3. 添加弹簧动画
+        [UIView animateWithDuration:0.7 delay:0 usingSpringWithDamping:.5 initialSpringVelocity:.9 options:(UIViewAnimationOptionBeginFromCurrentState) animations:^{
+            self.helperSideView.center = CGPointMake(self.keyWindow.centerX, self.helperSideView.centerY);
         } completion:nil];
-        [UIView animateWithDuration:.7 delay:0 usingSpringWithDamping:.8 initialSpringVelocity:2 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
-            helperCenterView.center = keyWindow.center;
-        } completion:^(BOOL finished) {
-            [self removeDisplayLink];
-        }];
-        //获取差值
-        [self getDiff];
-        //添加按钮的动画
-        [self addBtnAnim];
-        swiched = YES;
+        
+        [UIView animateWithDuration:0.7 delay:0 usingSpringWithDamping:.5 initialSpringVelocity:.9 options:(UIViewAnimationOptionBeginFromCurrentState) animations:^{
+            self.helperCenterView.center = self.keyWindow.center;
+        } completion:nil];
+        
+        
+        //3.添加弹簧动画
+//        [UIView animateWithDuration:.7 delay:0 usingSpringWithDamping:.5 initialSpringVelocity:.9 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+//            self.helperSideView.center = CGPointMake(self.keyWindow.center.x, CGRectGetHeight(self.helperSideView.bounds)/2);
+//        } completion:nil];
+//        [UIView animateWithDuration:.7 delay:0 usingSpringWithDamping:.8 initialSpringVelocity:2 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+//            self.helperCenterView.center = self.keyWindow.center;
+//        } completion:^(BOOL finished) {
+//            [self removeDisplayLink];
+//        }];
+//        //获取差值
+//        [self getDiff];
+//        //添加按钮的动画
+//        [self addBtnAnim];
+        _swiched = YES;
     }else{
         [self dismissView];
     }
@@ -179,12 +187,12 @@
 //消失
 - (void)dismissView{
     
-    swiched = NO;
+    _swiched = NO;
     [UIView animateWithDuration:.3 animations:^{
-        self.frame =CGRectMake(-(CGRectGetWidth(keyWindow.frame)/2 + menuBlankWidth), 0, CGRectGetWidth(keyWindow.frame)/2 + menuBlankWidth, CGRectGetHeight(keyWindow.frame));
-        blurView.alpha = 0;
-        helperSideView.center = CGPointMake(-20, 20);
-        helperCenterView.center = CGPointMake(-20, CGRectGetHeight(keyWindow.bounds)/2);
+        self.frame =CGRectMake(-(CGRectGetWidth(self.keyWindow.frame)/2 + menuBlankWidth), 0, CGRectGetWidth(self.keyWindow.frame)/2 + menuBlankWidth, CGRectGetHeight(self.keyWindow.frame));
+        self.blurView.alpha = 0;
+        self.helperSideView.center = CGPointMake(-20, self.helperSideView.centerY);
+        self.helperCenterView.center = CGPointMake(-20, CGRectGetHeight(self.keyWindow.bounds)/2);
     }];
 }
 @end

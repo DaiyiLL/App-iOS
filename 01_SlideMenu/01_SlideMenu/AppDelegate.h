@@ -10,6 +10,7 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
+@property (nonatomic,assign, class, readonly) UIEdgeInsets safeInset;
 
 @end
 

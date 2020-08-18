@@ -1,18 +1,28 @@
 PODS:
+  - CocoaLumberjack (3.6.2):
+    - CocoaLumberjack/Core (= 3.6.2)
+  - CocoaLumberjack/Core (3.6.2)
+  - DYFactoryKit (0.1.2)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
+  - CocoaLumberjack (~> 3.6.2)
+  - DYFactoryKit (~> 0.1.2)
   - YYKit (~> 1.0.9)
 
 SPEC REPOS:
   trunk:
+    - CocoaLumberjack
+    - DYFactoryKit
     - YYKit
 
 SPEC CHECKSUMS:
+  CocoaLumberjack: bd155f2dd06c0e0b03f876f7a3ee55693122ec94
+  DYFactoryKit: dedc2bf6cbaeae4e71d8c7b6f9e0be44ae732ed2
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: d7a9e5789c390e73757b5f505fdfc0045226d4c7
+PODFILE CHECKSUM: 7cc676b5bcc26312c0f04dc450bc0ce659d24114
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.3

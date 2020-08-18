@@ -10,6 +10,8 @@
 
 @interface AppDelegate ()
 
+@property (nonatomic, assign) UIEdgeInsets safe;
+
 @end
 
 @implementation AppDelegate
@@ -37,5 +39,25 @@
     // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
 }
 
+- (UIEdgeInsets)safe {
+    if (UIEdgeInsetsEqualToEdgeInsets(_safe, UIEdgeInsetsZero)) {
+        _safe = UIEdgeInsetsMake(20, 0, 0, 0);
+        UIWindow *keyWindow = [UIApplication sharedApplication].windows.firstObject;
+        if (@available(iOS 11.0, *)) {
+            _safe = keyWindow.safeAreaInsets;
+        }
+        if (_safe.top < 20) {
+            // 预防iOS11上top为0的情况
+            _safe.top = 20;
+        }
+    }
+    return _safe;
+}
+
+
++ (UIEdgeInsets)safeInset {
+    AppDelegate *delegate = (AppDelegate *)([UIApplication sharedApplication].delegate);
+    return delegate.safe;
+}
 
 @end

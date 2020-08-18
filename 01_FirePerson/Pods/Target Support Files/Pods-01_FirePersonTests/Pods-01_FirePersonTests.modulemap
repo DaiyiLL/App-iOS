@@ -1,0 +1,6 @@
+framework module Pods_01_FirePersonTests {
+  umbrella header "Pods-01_FirePersonTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
