@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_01_PraiseAnimation_01_PraiseAnimationUITests : NSObject
+@end
+@implementation PodsDummy_Pods_01_PraiseAnimation_01_PraiseAnimationUITests
+@end

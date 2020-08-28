@@ -1,0 +1,6 @@
+framework module Pods_01_PraiseAnimation_01_PraiseAnimationUITests {
+  umbrella header "Pods-01_PraiseAnimation-01_PraiseAnimationUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

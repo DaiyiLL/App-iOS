@@ -1,0 +1,745 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16F3C778FAF694AA760299C4 /* Pods_01_PraiseAnimation_01_PraiseAnimationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C6CB6F2031B6E61E01731B /* Pods_01_PraiseAnimation_01_PraiseAnimationUITests.framework */; };
+		6C3231D84E0BC44B2B4547E8 /* Pods_01_PraiseAnimationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554E275E748D50ABADED8AAC /* Pods_01_PraiseAnimationTests.framework */; };
+		953B95C724F3E2330032792F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 953B95C624F3E2330032792F /* AppDelegate.m */; };
+		953B95CA24F3E2330032792F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 953B95C924F3E2330032792F /* SceneDelegate.m */; };
+		953B95CD24F3E2330032792F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 953B95CC24F3E2330032792F /* ViewController.m */; };
+		953B95D024F3E2340032792F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953B95CE24F3E2340032792F /* Main.storyboard */; };
+		953B95D224F3E23E0032792F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 953B95D124F3E23E0032792F /* Assets.xcassets */; };
+		953B95D524F3E23E0032792F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953B95D324F3E23E0032792F /* LaunchScreen.storyboard */; };
+		953B95D824F3E23E0032792F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 953B95D724F3E23E0032792F /* main.m */; };
+		953B95E224F3E2400032792F /* _1_PraiseAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 953B95E124F3E2400032792F /* _1_PraiseAnimationTests.m */; };
+		953B95ED24F3E2400032792F /* _1_PraiseAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 953B95EC24F3E2400032792F /* _1_PraiseAnimationUITests.m */; };
+		C65EED1A556D8BF8CBC5E4C9 /* Pods_01_PraiseAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DD779DC92D744A8C34B9B6 /* Pods_01_PraiseAnimation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		953B95DE24F3E2400032792F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 953B95BA24F3E2330032792F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 953B95C124F3E2330032792F;
+			remoteInfo = 01_PraiseAnimation;
+		};
+		953B95E924F3E2400032792F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 953B95BA24F3E2330032792F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 953B95C124F3E2330032792F;
+			remoteInfo = 01_PraiseAnimation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F109B91E0B0825470A63B47 /* Pods-01_PraiseAnimationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-01_PraiseAnimationTests.release.xcconfig"; path = "Target Support Files/Pods-01_PraiseAnimationTests/Pods-01_PraiseAnimationTests.release.xcconfig"; sourceTree = "<group>"; };
+		13E054AE4584AE2CD4ADED69 /* Pods-01_PraiseAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-01_PraiseAnimation.debug.xcconfig"; path = "Target Support Files/Pods-01_PraiseAnimation/Pods-01_PraiseAnimation.debug.xcconfig"; sourceTree = "<group>"; };
+		18C6CB6F2031B6E61E01731B /* Pods_01_PraiseAnimation_01_PraiseAnimationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_01_PraiseAnimation_01_PraiseAnimationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		554E275E748D50ABADED8AAC /* Pods_01_PraiseAnimationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_01_PraiseAnimationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90DB9FAF2309108AC9A8A8DF /* Pods-01_PraiseAnimationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-01_PraiseAnimationTests.debug.xcconfig"; path = "Target Support Files/Pods-01_PraiseAnimationTests/Pods-01_PraiseAnimationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		953B95C224F3E2330032792F /* 01_PraiseAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 01_PraiseAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		953B95C524F3E2330032792F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		953B95C624F3E2330032792F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		953B95C824F3E2330032792F /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		953B95C924F3E2330032792F /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		953B95CB24F3E2330032792F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		953B95CC24F3E2330032792F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		953B95CF24F3E2340032792F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		953B95D124F3E23E0032792F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		953B95D424F3E23E0032792F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		953B95D624F3E23E0032792F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		953B95D724F3E23E0032792F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		953B95DD24F3E2400032792F /* 01_PraiseAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 01_PraiseAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		953B95E124F3E2400032792F /* _1_PraiseAnimationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _1_PraiseAnimationTests.m; sourceTree = "<group>"; };
+		953B95E324F3E2400032792F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		953B95E824F3E2400032792F /* 01_PraiseAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 01_PraiseAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		953B95EC24F3E2400032792F /* _1_PraiseAnimationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _1_PraiseAnimationUITests.m; sourceTree = "<group>"; };
+		953B95EE24F3E2400032792F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		953B95FA24F3E7850032792F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		A7DD779DC92D744A8C34B9B6 /* Pods_01_PraiseAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_01_PraiseAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE33CA2CF49341DC5D15693F /* Pods-01_PraiseAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-01_PraiseAnimation.release.xcconfig"; path = "Target Support Files/Pods-01_PraiseAnimation/Pods-01_PraiseAnimation.release.xcconfig"; sourceTree = "<group>"; };
+		B600CBF757BC9010BB78B1E3 /* Pods-01_PraiseAnimation-01_PraiseAnimationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-01_PraiseAnimation-01_PraiseAnimationUITests.release.xcconfig"; path = "Target Support Files/Pods-01_PraiseAnimation-01_PraiseAnimationUITests/Pods-01_PraiseAnimation-01_PraiseAnimationUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F72885315CA7C49782A1FA90 /* Pods-01_PraiseAnimation-01_PraiseAnimationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-01_PraiseAnimation-01_PraiseAnimationUITests.debug.xcconfig"; path = "Target Support Files/Pods-01_PraiseAnimation-01_PraiseAnimationUITests/Pods-01_PraiseAnimation-01_PraiseAnimationUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		953B95BF24F3E2330032792F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C65EED1A556D8BF8CBC5E4C9 /* Pods_01_PraiseAnimation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		953B95DA24F3E2400032792F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C3231D84E0BC44B2B4547E8 /* Pods_01_PraiseAnimationTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		953B95E524F3E2400032792F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16F3C778FAF694AA760299C4 /* Pods_01_PraiseAnimation_01_PraiseAnimationUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12F342A0D7B85AB69E500158 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				13E054AE4584AE2CD4ADED69 /* Pods-01_PraiseAnimation.debug.xcconfig */,
+				AE33CA2CF49341DC5D15693F /* Pods-01_PraiseAnimation.release.xcconfig */,
+				F72885315CA7C49782A1FA90 /* Pods-01_PraiseAnimation-01_PraiseAnimationUITests.debug.xcconfig */,
+				B600CBF757BC9010BB78B1E3 /* Pods-01_PraiseAnimation-01_PraiseAnimationUITests.release.xcconfig */,
+				90DB9FAF2309108AC9A8A8DF /* Pods-01_PraiseAnimationTests.debug.xcconfig */,
+				0F109B91E0B0825470A63B47 /* Pods-01_PraiseAnimationTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		953B95B924F3E2330032792F = {
+			isa = PBXGroup;
+			children = (
+				953B95C424F3E2330032792F /* 01_PraiseAnimation */,
+				953B95E024F3E2400032792F /* 01_PraiseAnimationTests */,
+				953B95EB24F3E2400032792F /* 01_PraiseAnimationUITests */,
+				953B95C324F3E2330032792F /* Products */,
+				12F342A0D7B85AB69E500158 /* Pods */,
+				F9FADFC6ABA4C70AB9FC7F2E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		953B95C324F3E2330032792F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				953B95C224F3E2330032792F /* 01_PraiseAnimation.app */,
+				953B95DD24F3E2400032792F /* 01_PraiseAnimationTests.xctest */,
+				953B95E824F3E2400032792F /* 01_PraiseAnimationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		953B95C424F3E2330032792F /* 01_PraiseAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				953B95C524F3E2330032792F /* AppDelegate.h */,
+				953B95C624F3E2330032792F /* AppDelegate.m */,
+				953B95C824F3E2330032792F /* SceneDelegate.h */,
+				953B95C924F3E2330032792F /* SceneDelegate.m */,
+				953B95CB24F3E2330032792F /* ViewController.h */,
+				953B95CC24F3E2330032792F /* ViewController.m */,
+				953B95CE24F3E2340032792F /* Main.storyboard */,
+				953B95D124F3E23E0032792F /* Assets.xcassets */,
+				953B95D324F3E23E0032792F /* LaunchScreen.storyboard */,
+				953B95D624F3E23E0032792F /* Info.plist */,
+				953B95D724F3E23E0032792F /* main.m */,
+				953B95FA24F3E7850032792F /* PrefixHeader.pch */,
+			);
+			path = 01_PraiseAnimation;
+			sourceTree = "<group>";
+		};
+		953B95E024F3E2400032792F /* 01_PraiseAnimationTests */ = {
+			isa = PBXGroup;
+			children = (
+				953B95E124F3E2400032792F /* _1_PraiseAnimationTests.m */,
+				953B95E324F3E2400032792F /* Info.plist */,
+			);
+			path = 01_PraiseAnimationTests;
+			sourceTree = "<group>";
+		};
+		953B95EB24F3E2400032792F /* 01_PraiseAnimationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				953B95EC24F3E2400032792F /* _1_PraiseAnimationUITests.m */,
+				953B95EE24F3E2400032792F /* Info.plist */,
+			);
+			path = 01_PraiseAnimationUITests;
+			sourceTree = "<group>";
+		};
+		F9FADFC6ABA4C70AB9FC7F2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7DD779DC92D744A8C34B9B6 /* Pods_01_PraiseAnimation.framework */,
+				18C6CB6F2031B6E61E01731B /* Pods_01_PraiseAnimation_01_PraiseAnimationUITests.framework */,
+				554E275E748D50ABADED8AAC /* Pods_01_PraiseAnimationTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		953B95C124F3E2330032792F /* 01_PraiseAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 953B95F124F3E2400032792F /* Build configuration list for PBXNativeTarget "01_PraiseAnimation" */;
+			buildPhases = (
+				9BFF55CBD3793653CFCA54D4 /* [CP] Check Pods Manifest.lock */,
+				953B95BE24F3E2330032792F /* Sources */,
+				953B95BF24F3E2330032792F /* Frameworks */,
+				953B95C024F3E2330032792F /* Resources */,
+				C16B3EE304703CEAC61440F7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 01_PraiseAnimation;
+			productName = 01_PraiseAnimation;
+			productReference = 953B95C224F3E2330032792F /* 01_PraiseAnimation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		953B95DC24F3E2400032792F /* 01_PraiseAnimationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 953B95F424F3E2400032792F /* Build configuration list for PBXNativeTarget "01_PraiseAnimationTests" */;
+			buildPhases = (
+				1B4875E71CC8BC44C22F0DC9 /* [CP] Check Pods Manifest.lock */,
+				953B95D924F3E2400032792F /* Sources */,
+				953B95DA24F3E2400032792F /* Frameworks */,
+				953B95DB24F3E2400032792F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				953B95DF24F3E2400032792F /* PBXTargetDependency */,
+			);
+			name = 01_PraiseAnimationTests;
+			productName = 01_PraiseAnimationTests;
+			productReference = 953B95DD24F3E2400032792F /* 01_PraiseAnimationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		953B95E724F3E2400032792F /* 01_PraiseAnimationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 953B95F724F3E2400032792F /* Build configuration list for PBXNativeTarget "01_PraiseAnimationUITests" */;
+			buildPhases = (
+				AA966847CC34A3038D5F3B52 /* [CP] Check Pods Manifest.lock */,
+				953B95E424F3E2400032792F /* Sources */,
+				953B95E524F3E2400032792F /* Frameworks */,
+				953B95E624F3E2400032792F /* Resources */,
+				7187EEC3CD43C8AA66271A94 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				953B95EA24F3E2400032792F /* PBXTargetDependency */,
+			);
+			name = 01_PraiseAnimationUITests;
+			productName = 01_PraiseAnimationUITests;
+			productReference = 953B95E824F3E2400032792F /* 01_PraiseAnimationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		953B95BA24F3E2330032792F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = yidai;
+				TargetAttributes = {
+					953B95C124F3E2330032792F = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					953B95DC24F3E2400032792F = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 953B95C124F3E2330032792F;
+					};
+					953B95E724F3E2400032792F = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 953B95C124F3E2330032792F;
+					};
+				};
+			};
+			buildConfigurationList = 953B95BD24F3E2330032792F /* Build configuration list for PBXProject "01_PraiseAnimation" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 953B95B924F3E2330032792F;
+			productRefGroup = 953B95C324F3E2330032792F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				953B95C124F3E2330032792F /* 01_PraiseAnimation */,
+				953B95DC24F3E2400032792F /* 01_PraiseAnimationTests */,
+				953B95E724F3E2400032792F /* 01_PraiseAnimationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		953B95C024F3E2330032792F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				953B95D524F3E23E0032792F /* LaunchScreen.storyboard in Resources */,
+				953B95D224F3E23E0032792F /* Assets.xcassets in Resources */,
+				953B95D024F3E2340032792F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		953B95DB24F3E2400032792F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		953B95E624F3E2400032792F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B4875E71CC8BC44C22F0DC9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-01_PraiseAnimationTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7187EEC3CD43C8AA66271A94 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-01_PraiseAnimation-01_PraiseAnimationUITests/Pods-01_PraiseAnimation-01_PraiseAnimationUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-01_PraiseAnimation-01_PraiseAnimationUITests/Pods-01_PraiseAnimation-01_PraiseAnimationUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-01_PraiseAnimation-01_PraiseAnimationUITests/Pods-01_PraiseAnimation-01_PraiseAnimationUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BFF55CBD3793653CFCA54D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-01_PraiseAnimation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA966847CC34A3038D5F3B52 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-01_PraiseAnimation-01_PraiseAnimationUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C16B3EE304703CEAC61440F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-01_PraiseAnimation/Pods-01_PraiseAnimation-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-01_PraiseAnimation/Pods-01_PraiseAnimation-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-01_PraiseAnimation/Pods-01_PraiseAnimation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		953B95BE24F3E2330032792F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				953B95CD24F3E2330032792F /* ViewController.m in Sources */,
+				953B95C724F3E2330032792F /* AppDelegate.m in Sources */,
+				953B95D824F3E23E0032792F /* main.m in Sources */,
+				953B95CA24F3E2330032792F /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		953B95D924F3E2400032792F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				953B95E224F3E2400032792F /* _1_PraiseAnimationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		953B95E424F3E2400032792F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				953B95ED24F3E2400032792F /* _1_PraiseAnimationUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		953B95DF24F3E2400032792F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 953B95C124F3E2330032792F /* 01_PraiseAnimation */;
+			targetProxy = 953B95DE24F3E2400032792F /* PBXContainerItemProxy */;
+		};
+		953B95EA24F3E2400032792F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 953B95C124F3E2330032792F /* 01_PraiseAnimation */;
+			targetProxy = 953B95E924F3E2400032792F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		953B95CE24F3E2340032792F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				953B95CF24F3E2340032792F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		953B95D324F3E23E0032792F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				953B95D424F3E23E0032792F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		953B95EF24F3E2400032792F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		953B95F024F3E2400032792F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		953B95F224F3E2400032792F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13E054AE4584AE2CD4ADED69 /* Pods-01_PraiseAnimation.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/01_PraiseAnimation/PrefixHeader.pch";
+				INFOPLIST_FILE = 01_PraiseAnimation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yidai.-1-PraiseAnimation";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		953B95F324F3E2400032792F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE33CA2CF49341DC5D15693F /* Pods-01_PraiseAnimation.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/01_PraiseAnimation/PrefixHeader.pch";
+				INFOPLIST_FILE = 01_PraiseAnimation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yidai.-1-PraiseAnimation";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		953B95F524F3E2400032792F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90DB9FAF2309108AC9A8A8DF /* Pods-01_PraiseAnimationTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = 01_PraiseAnimationTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yidai.-1-PraiseAnimationTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/01_PraiseAnimation.app/01_PraiseAnimation";
+			};
+			name = Debug;
+		};
+		953B95F624F3E2400032792F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F109B91E0B0825470A63B47 /* Pods-01_PraiseAnimationTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = 01_PraiseAnimationTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yidai.-1-PraiseAnimationTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/01_PraiseAnimation.app/01_PraiseAnimation";
+			};
+			name = Release;
+		};
+		953B95F824F3E2400032792F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F72885315CA7C49782A1FA90 /* Pods-01_PraiseAnimation-01_PraiseAnimationUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = 01_PraiseAnimationUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yidai.-1-PraiseAnimationUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = 01_PraiseAnimation;
+			};
+			name = Debug;
+		};
+		953B95F924F3E2400032792F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B600CBF757BC9010BB78B1E3 /* Pods-01_PraiseAnimation-01_PraiseAnimationUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = 01_PraiseAnimationUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yidai.-1-PraiseAnimationUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = 01_PraiseAnimation;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		953B95BD24F3E2330032792F /* Build configuration list for PBXProject "01_PraiseAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				953B95EF24F3E2400032792F /* Debug */,
+				953B95F024F3E2400032792F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		953B95F124F3E2400032792F /* Build configuration list for PBXNativeTarget "01_PraiseAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				953B95F224F3E2400032792F /* Debug */,
+				953B95F324F3E2400032792F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		953B95F424F3E2400032792F /* Build configuration list for PBXNativeTarget "01_PraiseAnimationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				953B95F524F3E2400032792F /* Debug */,
+				953B95F624F3E2400032792F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		953B95F724F3E2400032792F /* Build configuration list for PBXNativeTarget "01_PraiseAnimationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				953B95F824F3E2400032792F /* Debug */,
+				953B95F924F3E2400032792F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 953B95BA24F3E2330032792F /* Project object */;
+}

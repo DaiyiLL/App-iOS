@@ -32,6 +32,8 @@
 @property (nonatomic, strong) CADisplayLink *displayLink;
 @property (nonatomic, assign) NSInteger animationCount;
 
+@property (nonatomic, strong) NSArray<UIButton *> *btns;
+
 @end
 
 @implementation SlideMenuView
@@ -52,9 +54,9 @@
         
 //        [keyWindow addSubview:self];
         _helperSideView = [[UIView alloc] initWithFrame:CGRectMake(-40, AppDelegate.safeInset.top, 40, 40)];;
-        _helperSideView.backgroundColor = [UIColor redColor];
+//        _helperSideView.backgroundColor = [UIColor redColor];
         _helperCenterView = [[UIView alloc] initWithFrame:CGRectMake(-40, CGRectGetHeight(_keyWindow.bounds)/2-20, 40, 40)];;
-        _helperCenterView.backgroundColor = [UIColor orangeColor];
+//        _helperCenterView.backgroundColor = [UIColor orangeColor];
         
         [_keyWindow addSubview:_helperSideView];
         [_keyWindow addSubview:_helperCenterView];
@@ -78,7 +80,7 @@
     
     CGFloat halfWidth = _keyWindow.width * 0.5;
     [path addLineToPoint:CGPointMake(halfWidth, 0)];
-    [path addQuadCurveToPoint:CGPointMake(halfWidth, self.height) controlPoint:CGPointMake(halfWidth, self.height * 0.5)];
+    [path addQuadCurveToPoint:CGPointMake(halfWidth, self.height) controlPoint:CGPointMake(halfWidth + _diff, self.height * 0.5)];
     [path addLineToPoint:CGPointMake(0, self.height)];
     [path closePath];
     
@@ -86,6 +88,7 @@
     CGContextAddPath(context, path.CGPath);
     [_menuColor set];
     CGContextFillPath(context);
+    
     
 //    [path addLineToPoint:CGPointMake(CGRectGetWidth(keyWindow.frame)/2, 0)];
 //    [path addQuadCurveToPoint:CGPointMake(CGRectGetWidth(keyWindow.frame)/2, CGRectGetHeight(keyWindow.frame)) controlPoint:CGPointMake(CGRectGetWidth(keyWindow.frame)/2 + diff, CGRectGetHeight(keyWindow.frame)/2)];
@@ -101,21 +104,38 @@
 #pragma mark - func
 - (void)addBtnAnim{
     for (int i = 0; i < self.subviews.count; i++) {
-        UIView *btn = self.subviews[i];
+        UIButton *btn = _btns[i];
         btn.transform = CGAffineTransformMakeTranslation(-100, 0);
-        [UIView animateWithDuration:.7 delay:i*(0.3/self.subviews.count) usingSpringWithDamping:.6 initialSpringVelocity:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+        [UIView animateWithDuration:.7 delay:i * (0.3 / _btns.count) usingSpringWithDamping:.6 initialSpringVelocity:0 options:(UIViewAnimationOptionBeginFromCurrentState) animations:^{
             btn.transform = CGAffineTransformIdentity;
-        } completion:nil];
+        } completion:^(BOOL finished) {
+            
+        }];
     }
+    
+//    for (int i = 0; i < self.subviews.count; i++) {
+//        UIView *btn = self.subviews[i];
+//        btn.transform = CGAffineTransformMakeTranslation(-100, 0);
+//        [UIView animateWithDuration:.7 delay:i*(0.3/self.subviews.count) usingSpringWithDamping:.6 initialSpringVelocity:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+//            btn.transform = CGAffineTransformIdentity;
+//        } completion:nil];
+//    }
 }
 - (void)addBtnTitles:(NSArray *)titles{
     CGFloat space = (CGRectGetHeight(_keyWindow.bounds) - titles.count*menuBtnHeight - (titles.count-1)*buttonSpace)/2;
+    
+    NSMutableArray *tempList = [NSMutableArray arrayWithCapacity:titles.count];
     for (int i = 0; i < titles.count; i++) {
         UIButton *btn = [DYFactory initButtonWithFrame:CGRectZero title:titles[i] titleColor:UIColor.whiteColor font:[UIFont regularFont:15]];
         btn.center = CGPointMake(_keyWindow.width/4, space + menuBtnHeight*i + buttonSpace*i);
         btn.bounds = CGRectMake(0, 0, _keyWindow.width/2 - 20*2, menuBtnHeight);
+        btn.layer.borderColor = UIColor.whiteColor.CGColor;
+        btn.layer.borderWidth = 1.0;
+        btn.layer.cornerRadius = menuBtnHeight * 0.5;
         [self addSubview:btn];
+        [tempList addObject:btn];
     }
+    _btns = [NSArray arrayWithArray:tempList];
 }
 //添加定时器
 - (void)getDiff{
@@ -129,20 +149,20 @@
 - (void)removeDisplayLink{
     [_displayLink invalidate];
     _displayLink = nil;
+    _diff = 0;
 }
 - (void)displayLinkAction:(CADisplayLink *)link{
-//    NSLog(@"%@",NSStringFromCGRect(helperSideView.frame));
+//    NSLog(@"%@", NSStringFromCGRect(_helperSideView.frame));
     CALayer *layer1 = _helperSideView.layer.presentationLayer;
     CALayer *layer2 = _helperCenterView.layer.presentationLayer;
     
     CGRect r1 = [[layer1 valueForKeyPath:@"frame"] CGRectValue];
     CGRect r2 = [[layer2 valueForKeyPath:@"frame"] CGRectValue];
-
     _diff = r1.origin.x - r2.origin.x;
-    NSLog(@"%f", _diff);
     
-
     [self setNeedsDisplay];
+    
+//    NSLog(@"%f", _diff);
 }
 //点击按钮
 -(void)switchAcition{
@@ -160,10 +180,15 @@
             self.helperSideView.center = CGPointMake(self.keyWindow.centerX, self.helperSideView.centerY);
         } completion:nil];
         
-        [UIView animateWithDuration:0.7 delay:0 usingSpringWithDamping:.5 initialSpringVelocity:.9 options:(UIViewAnimationOptionBeginFromCurrentState) animations:^{
+        [UIView animateWithDuration:0.7 delay:0 usingSpringWithDamping:.8 initialSpringVelocity:.9 options:(UIViewAnimationOptionBeginFromCurrentState) animations:^{
             self.helperCenterView.center = self.keyWindow.center;
-        } completion:nil];
-        
+        } completion:^(BOOL finished) {
+            [self removeDisplayLink];
+        }];
+        // 获取差值
+        [self getDiff];
+        // 按钮的弹簧动画
+        [self addBtnAnim];
         
         //3.添加弹簧动画
 //        [UIView animateWithDuration:.7 delay:0 usingSpringWithDamping:.5 initialSpringVelocity:.9 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
