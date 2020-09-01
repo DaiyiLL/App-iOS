@@ -8,7 +8,7 @@ target '01_FirePerson' do
   # Pods for 01_FirePerson
   pod 'YYKit',           '~> 1.0.9'
   pod 'CocoaLumberjack', '~> 3.6.2'
-  pod 'DYFactoryKit',    '~> 0.1.1'
+  pod 'DYFactoryKit',    '~> 0.1.2'
 
   target '01_FirePersonTests' do
     inherit! :search_paths
