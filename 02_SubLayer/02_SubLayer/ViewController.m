@@ -53,6 +53,8 @@
     
     cubeLayer.position = CGPointMake(self.view.bounds.size.width / 2, self.view.bounds.size.height / 2);
 //    cubeLayer.bounds = CGRectMake(100, 100, 100, 100);
+    cubeLayer.position = self.view.center;
+    cubeLayer.transform = CATransform3DMakeRotation(M_PI_4, 1, 1, 0);
     
     
     [self.view.layer addSublayer:cubeLayer];

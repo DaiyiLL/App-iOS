@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-02_Transition-02_TransitionUITests/Pods-02_Transition-02_TransitionUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework
+${BUILT_PRODUCTS_DIR}/DYFactoryKit/DYFactoryKit.framework
+${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework
