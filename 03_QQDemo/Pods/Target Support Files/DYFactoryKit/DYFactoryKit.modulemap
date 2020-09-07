@@ -1,0 +1,6 @@
+framework module DYFactoryKit {
+  umbrella header "DYFactoryKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
