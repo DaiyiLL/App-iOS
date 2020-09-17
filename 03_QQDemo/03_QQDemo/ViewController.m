@@ -15,6 +15,7 @@
  */
 
 #import "ViewController.h"
+#import "NSThread+Shared.h"
 
 @interface ViewController ()
 
@@ -33,7 +34,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self performSelector:@selector(test) onThread:[NSThread shareThread] withObject:nil waitUntilDone:NO];
+    
     [self setup];
+}
+
+- (void)test {
+    NSLog(@"test: %@", [NSThread currentThread]);
 }
 
 - (void)setup {

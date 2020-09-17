@@ -15,6 +15,7 @@
 		9547CCAE2503775300623AC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9547CCAD2503775300623AC2 /* Assets.xcassets */; };
 		9547CCB12503775300623AC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9547CCAF2503775300623AC2 /* LaunchScreen.storyboard */; };
 		9547CCB42503775300623AC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9547CCB32503775300623AC2 /* main.m */; };
+		955E5E95250B709100320681 /* NSThread+Shared.m in Sources */ = {isa = PBXBuildFile; fileRef = 955E5E94250B709100320681 /* NSThread+Shared.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		9547CCB22503775300623AC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9547CCB32503775300623AC2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9547CCBA2503787100623AC2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		955E5E93250B709100320681 /* NSThread+Shared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSThread+Shared.h"; sourceTree = "<group>"; };
+		955E5E94250B709100320681 /* NSThread+Shared.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSThread+Shared.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 				9547CCA52503774D00623AC2 /* SceneDelegate.m */,
 				9547CCA72503774D00623AC2 /* ViewController.h */,
 				9547CCA82503774D00623AC2 /* ViewController.m */,
+				955E5E93250B709100320681 /* NSThread+Shared.h */,
+				955E5E94250B709100320681 /* NSThread+Shared.m */,
 				9547CCAA2503774D00623AC2 /* Main.storyboard */,
 				9547CCAD2503775300623AC2 /* Assets.xcassets */,
 				9547CCAF2503775300623AC2 /* LaunchScreen.storyboard */,
@@ -218,6 +223,7 @@
 			files = (
 				9547CCA92503774D00623AC2 /* ViewController.m in Sources */,
 				9547CCA32503774D00623AC2 /* AppDelegate.m in Sources */,
+				955E5E95250B709100320681 /* NSThread+Shared.m in Sources */,
 				9547CCB42503775300623AC2 /* main.m in Sources */,
 				9547CCA62503774D00623AC2 /* SceneDelegate.m in Sources */,
 			);
